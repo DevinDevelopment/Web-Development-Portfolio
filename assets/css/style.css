@@ -1,0 +1,219 @@
+/* global variables */
+:root {
+  --maincolor: cyan;
+  --backgroundcolor: #63666a;
+  --mainPageText: navy;
+}
+/* set margins and paddings for main comonent */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* sets nav bar to flex for seperation of devin title and nav links and adds height and bg color values*/
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: var(--backgroundcolor);
+  height: 75px;
+}
+
+/* sets styling to the name section of the nav bar */
+/* set that container to flex so we can align the name to the right of the flex container */
+/* added some margins and paddigns for alignments */
+nav h1 {
+  display: flex;
+  justify-content: end;
+  font-size: 45px;
+  margin-top: 10px;
+  width: 400px;
+  background-color: var(--maincolor);
+  color: var(--backgroundcolor);
+}
+
+/* does various changes to the font of the nav links */
+a {
+  color: var(--maincolor);
+  font-size: 20px;
+  font-family: "josefin Sans", sans-serif;
+  text-decoration: underline;
+}
+
+/* sets nav links to horizontal alignment and moves it to the right of page. sets width and margins of each li item */
+nav ul {
+  display: flex;
+  align-self: flex-end;
+  list-style-type: none;
+  margin-top: 30px;
+}
+
+/* adds margin to individual items in flexbox */
+nav li {
+  margin-right: 25px;
+  color: var(--maincolor);
+  text-decoration: none;
+}
+
+/* adds tutoring image and aligns it so that it takes up whole page and sets height and margins */
+.hero {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 30px;
+  background-image: url("../images/tutoring.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* adds margin to each section after .hero */
+section {
+  margin-bottom: 50px;
+}
+
+/* adds left aligned title for each section sets font and does various alignment and size changes*/
+section h1 {
+  display: inline-block;
+  align-self: self-end;
+  font-size: 50px;
+  font-family: "Gill Sans", sans-serif;
+  height: 60px;
+  /* margin-left: 5%; */
+  vertical-align: top;
+  width: 13%;
+}
+
+/* sets styles, margin, and alignment to the about me paragraph */
+/* sets to inline block for section to sit aside of header */
+#aboutme p {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 25px;
+  font-family: "Gill Sans", sans-serif;
+  width: 70%;
+  border-left: solid var(--mainPageText);
+  padding-left: 20px;
+}
+
+/* sets inblock to the container that contains the images */
+/* sets to inline block for section to sit aside of header */
+.imageFlex {
+  display: inline-block;
+  width: 70%;
+  border-left: solid var(--mainPageText);
+  padding-left: 20px;
+}
+
+/* sets the width of the images to my widths of choice */
+.image-1 {
+  width: 100%;
+}
+.image-2,
+.image-3 {
+  height: 500px;
+  width: 49.8%;
+}
+.image-4,
+.image-5 {
+  height: 300px;
+  width: 49.8%;
+}
+
+/* sets styling to the container that holds the contact me section */
+/* sets to inline block for section to sit aside of header */
+/* set to inline block to also have links set as columns */
+/* sets styling to fonts */
+section ul {
+  display: inline-block;
+  list-style: none;
+  font-size: 25px;
+  line-height: 35px;
+  font-family: "Gill Sans", sans-serif;
+  width: 70%;
+  border-left: solid var(--mainPageText);
+  padding-left: 20px;
+}
+
+/* adds under line to the span tag within the contact mediums */
+.contactType {
+  text-decoration: underline;
+}
+
+/* addes respinsiveness top the page, anything under 900px will take these styles */
+@media screen and (max-width: 900px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    display: inline;
+  }
+  header {
+    background-color: var(--backgroundcolor);
+  }
+  .innerflex {
+    margin-left: 25%;
+  }
+  section h1,
+  section p,
+  .hero,
+  ul,
+  li {
+    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* addes respinsiveness top the page, anything under 1015x will take these styles */
+@media screen and (max-width: 1015px) {
+  .innerflex {
+    margin-left: 30%;
+  }
+}
+
+/* addes respinsiveness top the page, anything under 1500px will take these styles */
+@media screen and (max-width: 1500px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  section{
+    border-top: navy;
+  }
+
+  #aboutme p{
+    width: 100%;
+  }
+
+  section h1 {
+    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .imageFlex {
+    width: 100%;
+  }
+
+  #contactme ul,
+  #contactme li {
+    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #resume, 
+  #resume p{
+    text-align: center;
+  }
+}
