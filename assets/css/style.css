@@ -139,6 +139,11 @@ section ul {
   text-decoration: underline;
 }
 
+/* ensures link styles have good contrast */
+#contactme a {
+  color: var(--mainPageText);
+}
+
 /* addes respinsiveness top the page, anything under 900px will take these styles */
 @media screen and (max-width: 900px) {
   * {
@@ -146,15 +151,22 @@ section ul {
     padding: 0;
     box-sizing: border-box;
   }
+
+  /* changes the nav links to columns and pushes under name container */
   nav {
     display: inline;
   }
+
+  /* Ensures that the background stay with smaller sizes */
   header {
     background-color: var(--backgroundcolor);
   }
+  /* sets the rows with two items to be one column thats centered */
   .innerflex {
     margin-left: 25%;
   }
+
+  /* ensure that these containers be come inline-block items so that everything is aligned as one coloumn */
   section h1,
   section p,
   .hero,
@@ -184,14 +196,12 @@ section ul {
     box-sizing: border-box;
   }
 
-  section{
-    border-top: navy;
-  }
-
-  #aboutme p{
+  /* makes about me full size when less that 1500px */
+  #aboutme p {
     width: 100%;
   }
 
+  /* every screen size below 1500px will see headers on top of the corrisponding sections rather than to the left */
   section h1 {
     display: inline-block;
     display: inline-flex;
@@ -200,20 +210,21 @@ section ul {
     width: 100%;
     margin-bottom: 10px;
   }
+
+  /* ensures proper image sizing when page is being resized  */
   .imageFlex {
     width: 100%;
   }
 
+  /* sets the left border properly */
   #contactme ul,
-  #contactme li {
+  #contactme li,
+  #resume ul,
+  #resume li {
     display: inline-block;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-  }
-  #resume, 
-  #resume p{
-    text-align: center;
   }
 }

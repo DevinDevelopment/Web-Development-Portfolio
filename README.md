@@ -20,7 +20,7 @@ N/a
 
 to use this Webpage there are 4 links in order to navigate to your wanted section. In this webpage we will be displaying my skills as a developer
 
-![Website screenshot](/assets/images/02-advanced-css-homework-demo.png)
+![Website screenshot](./assets/images/Capture.png)
 
 ## Credits
 
